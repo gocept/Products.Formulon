@@ -18,7 +18,7 @@ setuptools.setup(
     description="Form objects for Zope 2",
     long_description=(
         '.. contents::' +
-        read('README.txt') +
+        read('README.rst') +
         read('TODO.txt') +
         read('CHANGES.txt')
         ),
