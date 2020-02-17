@@ -1,0 +1,40 @@
+<dtml-var manage_page_header>
+<dtml-var manage_tabs>
+
+  <form action="manage_edit" method="POST">
+   <table cellspacing="2">
+
+    <tr>
+     <td> Content: </td>
+     <td colspan="3"> <input type="text" name="value:string" size="100" value="<dtml-var value missing html_quote>"> </td>
+    </tr>
+
+    <tr>
+     <td> Stylesheet class: </td>
+     <td colspan="3"> <input type="text" name="user_css:string" size="100" value="<dtml-var user_css missing html_quote>"> </td>
+    </tr>
+    
+    <tr><td colspan="4">&nbsp;</td></tr>
+    <tr><td colspan="4"><h3>Positioning:</h3></th></tr>
+
+    <tr>
+     <td> Column: </td>
+     <td> <input type="text" name="column:int" size="25" value="<dtml-var column missing>"> </td>
+     <td> Column spanning: </td>
+     <td> <input type="text" name="colspan:int" size="25" value="<dtml-var colspan missing>"> </td>
+    </tr>
+    
+    <tr>
+     <td> Row: </td>
+     <td> <input type="text" name="row:int" size="25" value="<dtml-var row missing>"> </td>
+     <td>Condition:</td>
+     <td><input type="TEXT" name="condition" size="25" value="<dtml-var "getMethodExpression(condition)" html_quote>"></td> 
+    </tr>
+
+    <tr>
+     <td><br><input type="submit" value="Change"></td>
+    </tr>
+   </table>
+   
+  </form>
+<dtml-var manage_page_footer>

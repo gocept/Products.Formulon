@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <title>Add Textfield</title>
+  </head>
+  
+  <body bgcolor="#FFFFFF" link="#000099" vlink="#555555" alink="#77003B">
+    
+    <form action="manage_addHTMLTextfield" method="POST">
+      <table cellspacing="2">
+        <tr bgcolor="#DDDDDD">
+          <td colspan="4">
+            <h2>Add Textfield</h2>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">&nbsp;</td>
+        </tr>
+	
+        <tr>
+          <td> Id: </td>
+          <td>
+            <input type="TEXT" name="id:string" size="25">
+          </td>
+          <td> Aliases: </td>
+          <td>
+            <textarea cols="25" name="aliases:lines"></textarea>
+          </td>
+	</tr>
+	<tr>
+          <td> Title: </td>
+          <td>
+            <input type="TEXT" name="title:string" size="25">
+          </td>
+          <td> Title (TALES): </td>
+          <td>
+            <input type="TEXT" name="taltitle:string" size="25">
+          </td>
+        </tr>
+
+        <tr>
+          <td> Default value: </td>
+          <td colspan="3">
+            <input type="TEXT" name="default:string" size="50" value="string:">
+          </td>
+        </tr>
+
+        <tr>
+          <td> Size: </td>
+          <td>
+            <input type="TEXT" name="size:int" size="25" value="20">
+          </td>
+          <td> Maximal length: </td>
+          <td>
+            <input type="TEXT" name="maxlength:int" size="25" value="50">
+          </td>
+        </tr>
+
+        <tr>
+          <td> Regular Expression: </td>
+          <td>
+            <input type="TEXT" name="regexp:string" size="25" value="string:.*">
+          </td>
+          <td> Hint:</td>
+          <td>
+            <input type="TEXT" name="hint:string" size="25" value="string:Wrong Format">
+          </td>
+        </tr>
+
+        <tr>
+          <td> Mask password: </td>
+          <td>
+            <input type="checkbox" name="ispassword:int" value="1">
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <h3>Positioning:</h3>
+          </th>
+        </tr>
+
+        <tr>
+          <td> Column: </td>
+          <td>
+            <input type="TEXT" name="column:int" size="25" value="1">
+          </td>
+          <td> Column spanning: </td>
+          <td>
+            <input type="TEXT" name="colspan:int" size="25" value="1">
+          </td>
+        </tr>
+        
+        <tr>
+          <td> Row: </td>
+          <td>
+            <input type="TEXT" name="row:int" size="25" value="1">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="SUBMIT" value="Add">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

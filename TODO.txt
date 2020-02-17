@@ -1,0 +1,12 @@
+========
+ Future
+========
+
+-   Make blocking-feature optional.
+
+-   History
+
+-   Fine grained permissions
+
+-   Beim Laden des Forms ins erste (fehlerhafte) Feld springen
+

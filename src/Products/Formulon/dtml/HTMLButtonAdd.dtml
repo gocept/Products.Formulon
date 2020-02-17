@@ -1,0 +1,65 @@
+<html>
+ <head>
+  <title>Add Button</title>
+ </head>
+
+  <body bgcolor="#FFFFFF" link="#000099" vlink="#555555" alink="#77003B">
+
+  <form action="manage_addHTMLButton" method="POST">
+   <table cellspacing="2" border="0">
+    <tr bgcolor="#DDDDDD"><td colspan="4"><h2>Add Button</h2></td></tr>
+    <tr><td colspan="4">&nbsp;</td></tr>
+
+    <tr>
+		<td> Id: </td>
+		<td> <input type="TEXT" name="id:string" size="25"> </td>
+		<td> Aliases: </td>
+		<td> <textarea name="aliases:lines"></textarea> </td>
+    </tr>
+    
+    <tr>
+     <td> Action: </td>
+     <td> <select name="type:string">
+           <option value="submit" selected>submit</option>
+           <option value="reset">reset</option>
+          </select> </td>
+     <td> Value: </td>
+     <td> <input type="TEXT" name="value:string" size="25"> </td>     
+    </tr>
+
+    <tr>
+     <td colspan="2">&#xA0;</td>
+     <td> CSS-Class: </td>
+     <td> <input type="TEXT" name="user_css:string" size="25"> </td>
+    </tr>
+
+    <tr>
+     <td> Image submit: </td>
+     <td><label> <input type="checkbox" name="isimg:int" value="1"> yes </label></td>
+     <td> Image URL: </td>
+     <td> <input type="TEXT" name="imgsrc:string" size="25"> </td> 
+    </tr>
+
+    <tr><td colspan="4">&nbsp;</td></tr>
+    <tr><td colspan="4"><h3>Positioning:</h3></th></tr>
+
+    <tr>
+     <td> Column: </td>
+     <td> <input type="TEXT" name="column:int" size="25" value="1"> </td>
+     <td> Column spanning: </td>
+     <td> <input type="TEXT" name="colspan:int" size="25" value="1"> </td>
+    </tr>
+    
+    <tr>
+     <td> Row: </td>
+     <td> <input type="TEXT" name="row:int" size="25" value="1"> </td>
+    </tr>
+
+    <tr>
+     <td><input type="SUBMIT" value="Add"></td>
+    </tr>
+    
+   </table>
+  </form>
+ </body>
+</html>

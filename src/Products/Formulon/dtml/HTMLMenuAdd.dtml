@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <title>Add HTML Menu</title>
+  </head>
+  
+  <body bgcolor="#FFFFFF" link="#000099" vlink="#555555" alink="#77003B">
+    
+    <form action="manage_addHTMLMenu" method="POST">
+      <table cellspacing="2">
+	<tr bgcolor="#DDDDDD"><td colspan="4"><h2>Add Menu</h2></td></tr>
+	<tr><td colspan="4">&nbsp;</td></tr>
+
+	<tr>
+	  <td> Id: </td>
+	  <td> <input type="TEXT" name="id:string" size="25"> </td>
+	  <td> Aliases: </td>
+	  <td> <textarea name="aliases:lines"></textarea> </td>
+	</tr>
+	<tr>
+	  <td> Title: </td>
+	  <td> <input type="TEXT" name="title:string" size="25"> </td>
+	  <td> Title (TALES): </td>
+	  <td> <input type="TEXT" name="taltitle:string" size="25"> </td>
+	</tr>
+
+    <tr>
+     <td> Optionsource (TALES): </td>
+     <td> <input type="TEXT" name="source:string" size="25" value=""> </td>
+     <td> Default selection (TALES):</td>
+     <td> <input type="TEXT" name="default:string" size="25"> </td>
+    </tr>
+
+    <tr>
+     <td> </td>
+     <td> </td>
+    </tr>
+
+    <tr>
+     <td> Allow multiple selections: </td>
+     <td> 
+        <input type="hidden" name="multiple:int:default" value="0" />
+        <input type="checkbox" name="multiple:int" value="1"> yes </td>
+     <td> Minimum required selections: </td>
+     <td> <input type="TEXT" name="required:int" size="25" value="1"> </td>
+    </tr>
+
+    <tr>
+     <td> Hint: </td>
+     <td>
+      <input type="TEXT" name="hint:string" size="25" value="string:Bitte w&auml;hlen."> 
+     </td>
+     <td> CSS-Class: </td>
+     <td>
+      <input type="TEXT" name="usercss:string" size="25" value=""> 
+     </td>
+    </tr>
+
+    <tr><td colspan="4">&nbsp;</td></tr>
+    <tr><td colspan="4"><h3>Visualization:</h3></th></tr>
+
+    <tr>
+     <td> Show as menu: </td>
+     <td>
+        <input type="hidden" name="ismenu:int:default" value="0" />
+        <input type="checkbox" name="ismenu:int" value="1"> yes</td>
+     <td> Menu height: </td>
+     <td> <input type="TEXT" name="size:int" size="25" value="5"> </td>
+    </tr>
+    
+    <tr>
+     <td>&nbsp;</td>     
+     <td>&nbsp;</td>     
+     <td> Button columns: </td>
+     <td> <input type="TEXT" name="buttonColumns:int" size="10" value="3"> </td>
+    </tr>
+
+    <tr><td colspan="4">&nbsp;</td></tr>
+    <tr><td colspan="4"><h3>Special ZERO Value:</h3></th></tr>
+
+    <tr>
+     <td> Provide special zero entry: </td>
+     <td> 
+        <input type="hidden" name="providezero:int:default" value="0" />
+        <input type="checkbox" name="providezero:int" value="1"> yes</td>
+     <td> Allow selection of special zero entry: </td>
+     <td> 
+        <input type="hidden" name="allowzero:int:default" value="0" />
+        <input type="checkbox" name="allowzero:int" value="1"> yes</td>
+    </tr>
+
+    <tr>
+     <td> Special zero value id (TALES): </td>
+     <td> <input type="text" name="zerodata:string" value="python:None"> </td>
+     <td> Title of the special value: </td>
+     <td> <input type="text" name="zerotitle:string" value="(choose)"> </td>
+    </tr>
+
+    <tr><td colspan="4">&nbsp;</td></tr>
+    <tr><td colspan="4"><h3>Positioning:</h3></th></tr>
+
+    <tr>
+     <td> Column: </td>
+     <td> <input type="TEXT" name="column:int" size="25" value="1"> </td>
+     <td> Column spanning: </td>
+     <td> <input type="TEXT" name="colspan:int" size="25" value="1"> </td>
+    </tr>
+    
+    <tr>
+     <td> Row: </td>
+     <td> <input type="TEXT" name="row:int" size="25" value="1"> </td>
+    </tr>
+
+    <tr>
+     <td><input type="SUBMIT" value="Add"></td>
+    </tr>
+   </table>
+  </form>
+ </body>
+</html>

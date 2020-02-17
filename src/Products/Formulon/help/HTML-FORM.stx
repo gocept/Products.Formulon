@@ -1,0 +1,26 @@
+HTMLForm: Organises your HTML Formulars.
+  
+  HTMLForm allows you to organise your HTML Forms and manage the widgets and
+  control the input checks.
+  
+
+  It renders the form automagically, formatted by css.
+
+	Stages in Form processing
+
+		1	Data display
+
+		2	Data gathering
+
+		3	Iterative Data validation, regathering and revalidation
+
+		4	Data processing
+
+
+	Terminology
+
+		Data processing
+
+			Handing out the gathered and successfully validated data to a function that
+			will do something handy with the data e.g. posting it into a SQL Database or
+			creating an object.

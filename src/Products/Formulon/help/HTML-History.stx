@@ -1,0 +1,17 @@
+History
+
+Formulon provides you with a function to display differences in the
+data that have been made in the past. To use this function, you need
+an additional Method that returns a list of dictionaries ordered 
+in version progression.
+
+This method is registered as "History Method" and needs to return a list 
+of dictionaries. Every dictionary stands for one revision. It also needs
+to have following attributes:
+    "rv_version"	... contains a version identifier e.g. a date or a version string
+    "rv_tag"	... some additional information about the version e.g. the user
+		    who made the version
+
+All other keys are looked up in the form and checked back in the dictionary to
+find out the names of the fields etc ...
+

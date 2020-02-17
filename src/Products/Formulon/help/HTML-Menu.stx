@@ -1,0 +1,76 @@
+HTMLMenu: Providing selectable options for your Forms
+	
+	The HTML Menu component allows you to provide 
+	... introduction ...
+	
+	Available options:
+	
+		Generic options:
+		
+			- Default selection
+				A python expression, that returns a list of values that are selected if
+				the data source didn't return a value for the menu. This is only used during
+				the first stage of form processing (data display)
+				
+			- Datatype
+
+				Used for describing the data type to be expected. This will end in
+				casting the values given from the user and the datasource to the given type
+				(Comment: "int" and "string" are the current used. "string" is default)
+
+			- Optionsource
+
+				A method that returns a list of options to be displayed. The list must contain
+				pairs of (value, title).
+
+			- Minimum required selections
+
+				The number of options that must be minimally selected to validate the input.
+				If the option "Allow multiple selections" is set to "No", this option is 
+				set to 1.
+
+			- Allow multiple selections
+
+				If set to "Yes", this option allows the user to select multiple options at once.
+		Visualisation
+		
+			- Show as menu
+
+				If set to "Yes", the widget will be shown as a menulist (dropdown / multiple select).
+				If set to "No", the widget will be shown as a group of radiobuttons / checkboxes.
+
+			- Menu height
+
+				If "Show as menu" is set to yes, this option how many lines the menu should be high.
+				If this value is set to 1, a drop down list will be rendered.
+
+			- Button columns
+
+				This option tells into how many columns the buttons shall be ordered if 
+				"Show as menu" isn't set.
+
+		Zero value
+
+			The Zero value is used to indicate a "NULL" value ("not selected", "unknown") for selections. 
+			This value gets it's own entry in the selection, because it has some special properties.
+			If the ZERO value is selected, no other value may be selected. The ZERO value can be restricted
+			beeing accessed. The ZERO value may need a special conversion in the data processing stage.
+
+			- Zero value for form
+
+				This should be a value that won't occur in your normal value range, but must be
+				castable to the given data type.
+
+			- Zero value for processing
+
+				This is a python Expression that returns the value that should be used for 
+				representing the ZERO value in the data processing stage. (e.g. None for SQL is Null)
+
+			- Title of the special value
+
+				This is the title, the special value should be presented as.
+
+			- Allow selection of special zero value
+
+				By default it is not allowed to select the zero value, if you want the
+				User to select the zero value, you need to set this option.

@@ -1,0 +1,81 @@
+  <html>
+    <head>
+      <title>Add Translation Rule</title>
+    </head>
+    <body bgcolor="#FFFFFF" link="#000099" vlink="#555555" alink="#77003B">
+      <form action="createErrorTranslationRule" method="POST">
+        <table cellspacing="2" border="0">
+          <tr bgcolor="#DDDDDD">
+            <td colspan="4">
+              <h2>Add Error Translation Rule</h2>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4">&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td>Name:</td>
+            <td><input type="TEXT" name="id:string" size="25"></td>
+            <td>Title:</td>
+            <td><input type="TEXT" name="title:string" size="25"></td>
+          </tr>
+    
+          <tr>
+            <td colspan="4"><h2>Translation Expressions</h2></td>
+          </tr>
+    
+          <tr>
+            <td>Error type expression:</td>
+            <td colspan="3"><input type="TEXT" name="typeMatch:string" size="75"></td>
+          </tr>
+
+          <tr>
+            <td>Error value expression:</td>
+            <td colspan="3"><input type="TEXT" name="errorMatch:string" size="75"></td>
+          </tr>
+    
+          <tr>
+            <td>User readable translation:</td>
+            <td colspan="3"><input type="TEXT" name="msgRule:string" size="75"></td>
+          </tr>    
+    
+          <tr>
+            <td colspan="4">
+              <h2>Field assignment parameters</h2>
+            </td>
+          </tr>
+    
+          <tr>
+            <td>Backreference to Fieldname (or alias):</td>
+            <td><input type="TEXT" name="brField:string" size="25"></td>
+            <td>Backreference to Fieldvalue:</td>
+            <td><input type="TEXT" name="brValue:string" size="25"></td>
+          </tr>
+    
+          <tr>
+            <td colspan="4">
+              <h2>Translation Priority</h2>
+            </td>
+          </tr>
+    
+          <tr>
+            <td>Priority:</td>
+            <td><input type="text" name="priority:int" size="25" value="100"></td>
+            <td colspan="2">
+              <small>
+                <b>Note:</b>
+                The higher the value in this field, the lower is the priority of the rule.
+              </small>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="4">
+              <input type="SUBMIT" value="Add">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </body>
+  </html>

@@ -1,0 +1,28 @@
+<html>
+ <head>
+  <title>Add Error Translation rule Group</title>
+ </head>
+
+  <body bgcolor="#FFFFFF" link="#000099" vlink="#555555" alink="#77003B">
+
+  <form action="createETRG" method="POST">
+   <table cellspacing="2" border="0">
+       <tr bgcolor="#DDDDDD"><td colspan="4"><h2>Error Translation Rule Group</h2></td></tr>
+    <tr><td colspan="4">&nbsp;</td></tr>
+
+    <tr>
+		<td> Id: </td>
+		<td> <input type="text" name="id:string" size="25"> </td>
+		<td> Title: </td>
+        <td> <input type="text" name="title:string" size="25"></td>
+    </tr>
+    
+
+    <tr>
+     <td><input type="SUBMIT" value="Add"></td>
+    </tr>
+    
+   </table>
+  </form>
+ </body>
+</html>

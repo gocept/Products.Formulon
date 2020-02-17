@@ -1,0 +1,71 @@
+<html>
+ <head>
+  <title>Add Formular</title>
+ </head>
+
+  <body bgcolor="#FFFFFF" link="#000099" vlink="#555555" alink="#77003B">
+
+  <form action="manage_addHTMLForm" method="POST">
+   <table cellspacing="2">
+    <tr bgcolor="#DDDDDD"><td colspan="4"><h2>Add Formular</h2></td></tr>
+    <tr><td colspan="4">&nbsp;</td></tr>
+
+    <tr>
+     <td> Id:</td>
+     <td> <input type="TEXT" name="id:string" size="25"> </td>
+     <td> Title:</td>
+     <td> <input type="TEXT" name="title:string" size="25"> </td>
+    </tr>
+
+    <tr>
+     <td> Transfermethod: </td>
+     <td> <select name="transferMethod:string">
+           <option value="GET">GET</option>
+           <option value="POST" selected>POST</option>
+          </select>
+     </td>
+     <td> Tabulator order: </td>
+     <td> <select name="taborder:string">
+           <option value="leftright" selected>First rows</option>
+           <option value="topdown">First columns</option>
+          </select>
+     </td>
+    </tr>
+
+    <tr>
+     <td> Datasource (TALES): </td>
+     <td> <input type="TEXT" name="sourceMethod:string" size="25"> </td>
+     <td> Datatarget (TALES): </td>
+     <td> <input type="TEXT" name="callMethod:string" size="25"> </td>
+    </tr>
+    
+   <tr>
+        <td> History Method (TALES): </td>
+        <td> <input type="TEXT" name="historyMethod:string" size="25" value=""> </td>
+   </tr>
+
+                
+    <tr>
+     <td> Target page: </td>
+     <td> <input type="TEXT" name="target" size="25"> </td>
+      <td> Success message: </td>
+      <td> <input type="TEXT" name="actionmsg:string" size="25" value="%(datetime)s: Daten gespeichert."> </td>
+    </tr>
+
+    <tr><td colspan="4">&nbsp;</td></tr>
+    
+    <tr>
+     <td> Cellspacing: </td>
+     <td> <input type="TEXT" name="cellspacing:int" size="25" value="0"> </td>
+     <td> Cellpadding: </td>
+     <td> <input type="TEXT" name="cellpadding:int" size="25" value="2"> </td>
+    </tr>
+
+    <tr>
+     <td><input type="SUBMIT" value="Add"></td>
+    </tr>
+   </table>
+  </form>
+ </body>
+</html>
+

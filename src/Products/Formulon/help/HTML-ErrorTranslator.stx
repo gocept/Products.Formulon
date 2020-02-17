@@ -1,0 +1,16 @@
+
+ErrorTranslator: Handle errors in data storage methods gracefully
+  
+  The ErrorTranslator handles (and translates) errors that occur,
+  when submitted and validated form data is processed.
+
+  Therefore you need to create an instance of the ErrorTranslatorRegistry
+  somewhere up in your ZODB hierarchy, so it will do all the translation
+  automagically. 
+
+  In the registry, you can create TranslationRules, that say how specific
+  errors should be handled/translated.
+
+TranslationRule
+
+	

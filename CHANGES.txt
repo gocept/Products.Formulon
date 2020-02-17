@@ -1,0 +1,259 @@
+============
+ Change log
+============
+
+
+1.0.4 (unreleased)
+==================
+
+- Nothing changed yet.
+
+
+1.0.3 (2011-03-30)
+==================
+
+- Fixed ``NameError`` in `HTMLForm` which was masked by the Python import
+  bug.
+
+
+1.0.2 (2011-03-30)
+==================
+
+- Made ``__init__`` methods accepting zero arguments, so `zope.app.fssync`
+  does not complain when importing.
+
+
+1.0.1 (2010-12-16)
+==================
+
+- `ErrorTranslator` no longer stores compiled versions of regex in the
+  ZODB. They are ``zope.cachedescriptors.property.CachedProperty`` now.
+
+
+1.0.0 (2010-12-14)
+==================
+
+- removed APE-specific stuff
+
+- added a setup.py for release as an egg, updated source tree layout
+
+
+0.5.0
+=====
+
+- Updated to run with Zope 2.9 (at least kind of).
+
+
+0.4.6
+=====
+
+- Serializer for HTMLMenu values is now a function, no longer a method of
+  HTMLMenu.
+
+
+0.4.5
+=====
+
+- Error messages are no longer attached to fields which are not displayed
+  because their condition evaluates to false.
+
+
+0.4.4
+=====
+
+- Rows in the grid which do not contain a widget for display are no longer
+  created at all. If you have some rows with not displayed widgets they do not
+  produce additional space (emtpy rows).
+
+
+0.4.3
+=====
+
+- Update using external method required!
+
+- Added CSS-Field to HTMLMenu.
+
+- Added title field which is a tales expression, if it is set, the expression
+  will be computed and displayed otherwise the normal title gets displayed.
+
+
+0.4.2
+=====
+
+- Made usage of fields which are not shown a bit more comfortable because they
+  have now a __nonzero__-method.
+
+
+0.4.1
+=====
+
+- Added a user settable css class attribute to HTMLButton.
+
+- Added a user settable css class attribute to HTMLTextarea.
+
+- Requires update of all existing HTMLButtons.
+
+
+0.4.0
+=====
+
+- Now requires at least Python 2.3.
+
+- Made regular expression, hint and default fields TalesExpressions.
+
+- Requires to run Extensions/update_all as external method to update existing
+  Instances.
+
+
+0.3.6
+=====
+
+- Changed error hint a bit to avoid unicode errors.
+
+
+0.3.5
+=====
+
+- Made focus on first widget working with HTMLMenus displayed as checkboxes or
+  radiobuttons. (bug #2530)
+
+
+0.3.4
+=====
+
+- Removed broken caching of values in HTMLMenu
+
+
+0.3.3.2
+=======
+
+- Fixed bug in setting of focus in first field in form.
+
+
+0.3.3.1
+=======
+
+- Fixed OPTGROUPS refactoring that made the menus unusable.
+
+
+0.3.3
+=====
+
+- Removed XUL code
+
+- Formulon now automatically puts the focus on the first field in the form.
+  (JavaScript, Mozilla and IE tested)
+
+- Added support for OPTGROUPs in menus. (They are ignored for buttons.)
+
+
+0.3.2
+=====
+
+- nobody documented this!
+
+
+0.3.1
+=====
+
+- Fixed ZMI unicode encoding bug (falsely took site_encoding (utf-8) instead
+  of iso-8859-1 for HTMLDisplay properties) (#1903)
+
+- Fixed column spanning for hint cells. (#1889)
+
+
+0.3
+===
+
+- Added Error Translation Rule Groups
+
+- Optimized sorting of Error Translation Rules
+
+- Fixed visual editor image "custom up"
+
+- Visual Editor table below arrangement tables (#1231)
+
+- Made "Edit"-Link in Visual Editor a bit smaller (#1231)
+
+- Fixed "Allow selection of of special zero entry" to be saved on adding an
+  HTMLMenu object. (#1235)
+
+- New fields can be added through the visual editor now. (#1233)
+
+- Moved code from the visual Editor method to the DTML method.
+
+- Visual Editor now supports "inverse selection" for elements.
+
+
+0.2
+===
+
+- Added "Link"-Feature for HTML-Displays. They create anchor tags instead of
+  spans when finding e-mails or http links (adding mailto: appropriately)
+
+- HTMLMenu/Zeroselection: if getValue() returns an empty list and there is a
+  special Zerovalue defined and allowed, it is assumed that the zerovalue is
+  selected.
+
+- Bug 1304: Mehrere Regexp-Gruppen in Fehlerwerten werden jetzt richtig
+  behandelt
+
+- Bug 1420: HTMLDisplays stellen \n richtig dar.
+
+- Bug 1434: HTMLDisplays forget their values on revalidation
+
+- Errortranslator has a new method for translating errors from untrusted code.
+  ("translateEasy")
+
+- Fixed html quotings
+
+- Fixed handling of untranslated messages
+
+- Fixed "require"-validation of Fileupload
+
+- Visual editor has links for editing the widget
+
+- HTMLForm has a title now
+
+- Added feature that (slightly) blocks users when they try to leave a page
+  where they edited a form but didn't save the data.
+
+- Refactoring for bug 991, context will be more sensitive as we remain with
+  only one entry point. Therefore a lot information doesn't need to be carried
+  with the postings anymore and can be derived from the current call of the
+  form, even after second or later submission (__target_path__ and others)
+
+- Added an error message to an assertion in the HTMLMenu
+
+- Added self.__implements__ to the update routines
+
+- fixed the Error Registry
+
+- Modified HTMLMenu behaviour. The optionsource may now return a list of
+  2-tuples containing (value,title) for the options. The old behaviour of
+  returning a list of Dictionaries ( {'value': ..., 'title': } ) is still
+  supported and they will be both supported in future too.
+
+- Added function all_meta_types to the ErrorTranslator. Now you only can add
+  Error Translation Rules to this object manager.
+
+- added attribute "Table width" to the HTMLForm component. If it is set, the
+  table width will be set as an attribute of the rendered table tag.
+
+
+0.1.1
+=====
+
+- Introduced standard Interfaces for Widgets
+
+- Introduced Error Translation Registry
+
+- Fixed HTMLMenu "NULL" behaviour
+
+- cleaned up almost all source code
+
+
+0.1
+===
+
+- undocumented

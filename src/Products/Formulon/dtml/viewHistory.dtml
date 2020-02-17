@@ -1,0 +1,41 @@
+<HTML>
+<BODY>
+    <H1>History</H1>
+
+    <TABLE border="0" cellpadding="2" cellspacing="0" width="600"> 
+
+    <dtml-in getHistory prefix="hist">
+	<!-- REVISION HEADER -->
+	<tr bgcolor="#EEEEEE">
+		<td colspan="4"><b><dtml-var "_['hist_item']['rv_version']"></b></td>
+		<td colspan="2"><b><dtml-var "_['hist_item']['rv_tag']"></b></td>
+	</tr>
+
+	<!-- REVISION DATA -->
+	<tr>
+        <dtml-in "_['hist_item']['rv_data'].items()" prefix="hist2">
+		<dtml-if "(_['hist2_index'] % 3)==0"></tr><tr></dtml-if>
+		<td bgcolor="#CCCCCC" width="100">
+			<dtml-if "_.hasattr(this(),hist2_key)">
+		    		<dtml-var "_.getattr(this(),hist2_key).title">
+			<dtml-else>
+				<dtml-var hist2_key>
+			</dtml-if>
+		</td>
+		<td width="100">
+			<dtml-var "_['hist2_item'][0]"> &nbsp;
+		</td>
+
+		<dtml-if "_['hist2_end']">
+                <dtml-in "_.range(0,2-(_['hist2_index']%3))">
+			<td width="100">&nbsp;</td><td width="100">&nbsp;</td>
+		</dtml-in>
+		</dtml-if>
+	</dtml-in>
+	</tr>
+
+    </dtml-in>
+
+    </TABLE>
+</BODY>
+</HTML>

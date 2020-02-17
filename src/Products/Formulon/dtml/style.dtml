@@ -1,0 +1,26 @@
+input:hover {
+    background-color: #EEE;
+}
+                
+input.text {
+    margin-left: 3px;
+    margin-right: 3px;
+    background-color: white;
+    color: #CCCCCC;
+    border: 1px inset black;
+    text-align: center;
+}
+                
+input.text:focus {
+    border-color: #EEE;
+    color: black;
+}
+                
+.editor {
+    float:left;
+    margin: 3px;
+}
+
+.preview {
+    clear: both;
+    }
